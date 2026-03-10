@@ -157,7 +157,7 @@ function LoginPage() {
                 marginTop: "96px",
                 padding: "0.75rem",
                 backgroundColor: "#C10C99",
-                color: "#000",
+                color: "#fff",
                 borderRadius: "32px",
                 border: "none",
                 fontSize: "16px",
