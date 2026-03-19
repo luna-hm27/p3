@@ -2,9 +2,10 @@ import React, { useRef, useEffect, useState } from "react";
 import Papa from "papaparse";
 import { db } from "../utils/firebase_store";
 import { collection, onSnapshot, deleteDoc, doc, addDoc, updateDoc, serverTimestamp } from "firebase/firestore";
-import { auth } from "../utils/firebase_auth";
-import { createUserWithEmailAndPassword, deleteUser, getAuth } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+//import { auth } from "../utils/firebase_auth";
+import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+//import { createUserWithEmailAndPassword, deleteUser, getAuth } from "firebase/auth";
+//import { useNavigate } from "react-router-dom";
 
 const SUBJECTS = {
   "Elementary School": [
@@ -43,7 +44,7 @@ const AdminPage = () => {
   const [updatedUser, setUpdatedUser] = useState({ firstName: "", lastName: "", email: "", password: "", subject: [], role: "", gradeLevel: "", courseCategory: "" });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const firebaseAuth = getAuth();
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const fileInputRef = useRef();
 
   useEffect(() => {
@@ -204,7 +205,7 @@ const AdminPage = () => {
     }
   };
 
-  const handleDeleteUser = async (userId) => {
+  //const handleDeleteUser = async (userId) => {
     if (!window.confirm("Are you sure you want to delete this user?")) return;
     try {
       await deleteDoc(doc(db, "users", userId));
@@ -245,7 +246,7 @@ const AdminPage = () => {
 };
 
 
-const handleCourseCategoryChange = (e, isNew = false) => {
+//const handleCourseCategoryChange = (e, isNew = false) => {
   const value = e.target.value;
 
   if (isNew) {
@@ -306,7 +307,7 @@ const handleCourseCategoryChange = (e, isNew = false) => {
   const availableSubjects = getAvailableSubjects(gradeLevel, courseCategory) || [];
   const currentUser = isNew ? newUser : updatedUser;
 
-  const handleCategoryChange = (e) => {
+ // const handleCategoryChange = (e) => {
     const newCategory = e.target.value;
     const updatedState = {
       ...currentUser,
