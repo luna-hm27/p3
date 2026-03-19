@@ -2,7 +2,7 @@ import logo from "../assets/img/logo.png";
 import backgroundLogo from "../assets/img/background-logo.png";
 import { useState } from "react";
 import { MdOutlineEmail, MdOutlineLock, MdOutlinePerson } from "react-icons/md";
-import { FcGoogle } from "react-icons/fc";
+//import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 import { signUp, signInWithGoogle } from "../utils/firebase_auth";
 
@@ -15,8 +15,8 @@ function SignUpPage() {
   const navigate = useNavigate();
 
   //no used
-  const onGoogleLogin = async () => {
-    var result = await signInWithGoogle();
+ // const onGoogleLogin = async () => {
+   // var result = await signInWithGoogle();
     if(result){
       //로그인 페이지 이동
       navigate("/");
