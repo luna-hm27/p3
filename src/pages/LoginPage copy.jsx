@@ -188,7 +188,7 @@ function LoginPage() {
             >
               {t('login')}
             </button>
-            {/* <p
+            { <p
               style={{
                 color: "#B5B5B5",
                 margin: "32px 0",
@@ -213,7 +213,7 @@ function LoginPage() {
                   fontSize: "18px",
                 }}
               />
-            </div> */}
+            </div> }
 
             
           </div>
