@@ -1,10 +1,10 @@
 import logo from "../assets/img/logo.png";
 import backgroundLogo from "../assets/img/background-logo.png";
 import { useState } from "react";
-import { MdEmail, MdLock, MdOutlineEmail, MdOutlineLock } from "react-icons/md";
-import { FcGoogle } from "react-icons/fc";
+import { MdOutlineEmail, MdOutlineLock } from "react-icons/md";
+//import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
-import { auth, signIn, signInWithGoogle } from "../utils/firebase_auth";
+import { signIn, signInWithGoogle } from "../utils/firebase_auth";
 import { useTranslation } from "react-i18next";
 
 //new
@@ -29,9 +29,9 @@ function LoginPage() {
 
 
   //google login
-  const onGoogleLogin = async () => {
+ /* const onGoogleLogin = async () => {
     await signInWithGoogle();
-  };
+  };*/
 
 
 
@@ -43,7 +43,7 @@ function LoginPage() {
           justifyContent: "center",
           alignItems: "center",
           height: "100vh",
-          backgroundImage: `url('${backgroundLogo}')`,
+          backgroundImage: `url(${backgroundLogo})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
