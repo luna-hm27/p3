@@ -5,19 +5,19 @@ import { MdOutlineEmail, MdOutlineLock } from "react-icons/md";
 //import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 import { signIn, signInWithGoogle } from "../utils/firebase_auth";
-import { useTranslation } from "react-i18next";
+//import { useTranslation } from "react-i18next";
 
 //new
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
+  //const { t, i18n } = useTranslation();
 
   //언어 변경
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
+  //const changeLanguage = (lng) => {
+  //  i18n.changeLanguage(lng);
+  //};
 
   //web login
   const onLogin = async () => {
@@ -29,9 +29,9 @@ function LoginPage() {
 
 
   //google login
- /* const onGoogleLogin = async () => {
+ const onGoogleLogin = async () => {
     await signInWithGoogle();
-  };*/
+  };
 
 
 
